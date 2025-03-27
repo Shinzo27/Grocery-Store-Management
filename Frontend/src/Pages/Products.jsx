@@ -48,42 +48,6 @@ const Product = () => {
           ))}
         </div>
       </div>
-      <div className="pt-6 ">
-        <div className="flex justify-center items-center gap-5 flex-wrap">
-          <div className=" w-5/6 h-16 bg-blue-500 flex items-center justify-center text-white rounded-xl">
-            <h1 className="text-3xl">{"Category"}</h1>
-          </div>
-        </div>
-        <div className=" p-5 flex justify-center items-center gap-5 flex-wrap">
-          {category.products.map((product) => (
-            <ProductCard
-              img={product.imgUrl}
-              ProductName={product.name}
-              ProductPrice={product.price}
-              id={product._id}
-              key={product._id}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="pt-6 ">
-        <div className="flex justify-center items-center gap-5 flex-wrap">
-          <div className=" w-5/6 h-16 bg-blue-500 flex items-center justify-center text-white rounded-xl">
-            <h1 className="text-3xl">{"Category"}</h1>
-          </div>
-        </div>
-        <div className=" p-5 flex justify-center items-center gap-5 flex-wrap">
-          {category.products.map((product) => (
-            <ProductCard
-              img={product.imgUrl}
-              ProductName={product.name}
-              ProductPrice={product.price}
-              id={product._id}
-              key={product._id}
-            />
-          ))}
-        </div>
-      </div>
     </>
   );
 };

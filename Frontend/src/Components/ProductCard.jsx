@@ -32,7 +32,7 @@ const ProductCard = ({ id, img, ProductName, ProductPrice}) => {
           </div>
         </div>
         <div className=' h-28 w-28 mr-4'>
-        <img src={img} alt="" className='w-full h-full object-contain rounded-lg'/>
+        <img src={img} alt="" className='w-full h-full object-fill rounded-md'/>
         </div>
       </div>
     </>

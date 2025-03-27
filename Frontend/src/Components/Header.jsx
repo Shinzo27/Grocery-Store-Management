@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoCart } from "react-icons/io5";
-import { CgProfile } from "react-icons/cg";
 import { HiMenu } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { LuLogOut } from "react-icons/lu";
-import axios from "axios";
-import { toast } from "react-toastify";
 
 const Header = () => {
     const [toggleButton, setToggleButton] = useState(false);
@@ -50,9 +47,9 @@ const Header = () => {
           <div className="py-4 ">
             <div className="container flex justify-between items-center border-b border-gray-300">
               <div className="flex items-center gap-10 text-xl">
-                <a to="#" className="">
+                <Link to="/" className="">
                   <img className="p-2 w-44" src=".\logo.png" alt="" />
-                </a>
+                </Link>
                 <div className="hidden lg:block">
                   <ul className="flex items-center gap-4">
                     {MenuLinks.map((data, index) => (
@@ -60,7 +57,7 @@ const Header = () => {
                         key={index}
                         className="inline-block px-4 font-medium text-gray-500 hover:text-orange-500 duration-200"
                       >
-                        <a to={data.link}>{data.name}</a>
+                        <Link to={data.link}>{data.name}</Link>
                       </li>
                     ))}
                   </ul>
@@ -103,36 +100,36 @@ const Header = () => {
             }`}
           >
             <div className="lg:flex-grow text-l">
-              <a
+              <Link
                 to="/"
                 className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4 hover:text-orange-500"
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 to="/products"
                 className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4 hover:text-orange-500"
               >
                 Shop
-              </a>
-              <a
+              </Link>
+              <Link
                 to="/about"
                 className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4 hover:text-orange-500"
               >
                 About
-              </a>
-                <a
+              </Link>
+                <Link
                   to="/profile"
                   className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4 pb-5 hover:text-orange-500"
                 >
                   {"username"}
-                </a>
-                <a
+                </Link>
+                <Link
                   to="/login"
                   className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4 pb-5 hover:text-orange-500"
                 >
                   Login
-                </a>
+                </Link>
             </div>
           </div>
         </div>
